@@ -1,0 +1,14 @@
+1. Reflect on the differences between static and interactive visualizations.
+
+Static charts are used when we need quick and basic data exploration, but there are no interaction tools with static charts like Matplotlib. 
+Interactive visualizations are useful for exploring data and insights in real time by interacting with charts using tools like the Plotly Python library.
+
+
+2. Write a short paragraph discussing the advantages of using dashboards for real-time data exploration.
+
+Dashboards help users interact with data and explore it more easily by getting insights, filtering data, and generating reports.
+
+
+3. Explain how interactive tools like Plotly can improve data communication in professional settings.
+
+Because users can explore data and insights more easily.
