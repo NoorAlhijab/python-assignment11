@@ -4,10 +4,15 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.data as pldata
+from pathlib import Path
+
+db_path = Path(__file__).parent.parent / "db" / "lesson.db"
+
 # Task 1
 st.title("Employee Performance Dashboard")
+
 # Connect to database
-with sqlite3.connect("../db/lesson.db") as conn:
+with sqlite3.connect(db_path) as conn:
     query = """
     SELECT last_name, 
     SUM(price * quantity) AS revenue 
@@ -37,7 +42,7 @@ st.pyplot(fig)
 # Task 2
 st.title("Cumulative Revenue")
 # Connect to database
-with sqlite3.connect("../db/lesson.db") as conn:
+with sqlite3.connect(db_path) as conn:
     query = """
     SELECT 
     orders.order_id,
@@ -79,7 +84,7 @@ fig3 = px.scatter(
     title="Wind Strength vs Frequency",
     labels={
        "strength": "Wind Strength",
-       "frequency": "Frequently",
+       "frequency": "Frequency",
        "direction": "Wind Direction"
     }
     )
